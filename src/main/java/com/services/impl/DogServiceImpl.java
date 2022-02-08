@@ -59,6 +59,7 @@ public class DogServiceImpl implements DogService {
         dogDto.setId(dog.getId());
         dogDto.setName(dog.getName());
         dogDto.setRace(dog.getRace());
+        dogDto.setBirthDate(dog.getBirthDate());
         return dogDto;
     }
 
@@ -70,6 +71,7 @@ public class DogServiceImpl implements DogService {
         dog.setName(dogDto.getName());
         dog.setId(dogDto.getId());
         dog.setRace(dogDto.getRace());
+        dog.setBirthDate(dogDto.getBirthDate());
         return dog;
     }
 }

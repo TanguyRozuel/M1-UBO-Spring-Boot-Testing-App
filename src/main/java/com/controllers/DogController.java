@@ -39,6 +39,7 @@ public class DogController {
 	 */
 	@PostMapping
 	public DogDto saveDog(final @RequestBody DogDto dogDto){
+		System.out.println(dogDto);
 		return dogService.saveDog(dogDto);
 	}
 
