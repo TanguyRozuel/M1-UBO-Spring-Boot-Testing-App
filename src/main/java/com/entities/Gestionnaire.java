@@ -1,5 +1,5 @@
 package com.entities;
 
-public class Gestionnaire {
+public class Gestionnaire extends Utilisateur{
 
 }
