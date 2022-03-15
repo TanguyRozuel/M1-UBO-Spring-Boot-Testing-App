@@ -6,7 +6,6 @@ import javax.persistence.*;
 @Entity
 @Data
 public class Cours {
-
     @Id
     @Column(name = "cours_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
