@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "c1b0dc6a-0cd9-41aa-8214-d567fd5defa0",
+		"name": "vacataire",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "recupere_tout_vacataire",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recupere_un_vacataire",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dogs/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dogs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "supprimme_vacataire",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vacataire/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vacataire",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creer_vacataire",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"mail\": \"tanguy@gmail.com\",\r\n\"nom\":\"rozuel\",\r\n\"prenom\":\"tanguy\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vacataire",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vacataire"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
