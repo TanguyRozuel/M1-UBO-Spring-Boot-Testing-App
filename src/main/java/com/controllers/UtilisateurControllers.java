@@ -18,7 +18,7 @@ public class UtilisateurControllers {
     }
 
     /**
-     * <p>Get all users in the system</p>
+     * <p>Récupère tous les utilisateurs dans le système</p>
      * @return List<UserDto>
      */
     @GetMapping
@@ -27,7 +27,7 @@ public class UtilisateurControllers {
     }
 
     /**
-     * Method to get the user based on the ID
+     * Méthode qui récupère un utilisateur grâce à son id
      */
     @GetMapping("/{id}")
     public UtilisateurDto RecupereUnCours(@PathVariable Long id){
@@ -35,7 +35,7 @@ public class UtilisateurControllers {
     }
 
     /**
-     * Create a new user in the system
+     * Création d'un nouveau Utilisateur dans le système
      */
     @PostMapping
     public UtilisateurDto CreerUtilisateur(final @RequestBody UtilisateurDto userDto){
@@ -44,7 +44,7 @@ public class UtilisateurControllers {
     }
 
     /**
-     * Delete a user by it's id
+     * Supprime un utilisateur grâce à son id
      */
     @DeleteMapping("/{id}")
     public Boolean SupprimmeUnUtilisateur(@PathVariable Long id) {
