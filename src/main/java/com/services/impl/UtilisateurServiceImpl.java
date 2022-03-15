@@ -21,11 +21,11 @@ public class UtilisateurServiceImpl implements UtilisateurService {
 
     @Override
     public UtilisateurDto creeUtilisateur(UtilisateurDto UtilisateurDto) {
-        // Converts the dto to the dog entity
+        //Conversion du dto pour une entité Utilisateur
         Utilisateur user = userDtoToEntity(UtilisateurDto);
-        // Save the dog entity
+        // Sauvegarde de l'entité Utilisateur
         user = utilisateurRepository.save(user);
-        // Return the new dto
+        // Return du nouveau dto
         return userEntityToDto(user);
     }
 
@@ -58,7 +58,7 @@ public class UtilisateurServiceImpl implements UtilisateurService {
 
 
     /**
-     * Map dog dto to dog entity
+     * Map Utilisateur dto to Utilisateur entity
      */
     private UtilisateurDto userEntityToDto(Utilisateur user){
         UtilisateurDto userDto = new UtilisateurDto();
@@ -71,7 +71,7 @@ public class UtilisateurServiceImpl implements UtilisateurService {
     }
 
     /**
-     * Map dog entity to dog dto
+     * Map Utilisateur entity to Utilisateur dto
      */
     private Utilisateur userDtoToEntity(UtilisateurDto utilisateurDto){
         Utilisateur user = new Utilisateur();
