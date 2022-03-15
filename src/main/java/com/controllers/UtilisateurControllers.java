@@ -1,6 +1,5 @@
 package com.controllers;
 
-import com.dtos.DogDto;
 import com.dtos.UtilisateurDto;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +22,7 @@ public class UtilisateurControllers {
      * @return List<UserDto>
      */
     @GetMapping
-    public List<UtilisateurDto> getAllUser() {
+    public List<UtilisateurDto> RecupereToutUtilisateur() {
         return userService.getAllUser();
     }
 
@@ -31,7 +30,7 @@ public class UtilisateurControllers {
      * Method to get the user based on the ID
      */
     @GetMapping("/{id}")
-    public UtilisateurDto getUserById(@PathVariable Long id){
+    public UtilisateurDto RecupereUnCours(@PathVariable Long id){
         return userService.getUserById(id);
     }
 
@@ -39,7 +38,7 @@ public class UtilisateurControllers {
      * Create a new user in the system
      */
     @PostMapping
-    public UtilisateurDto creeUtilisateur(final @RequestBody UtilisateurDto userDto){
+    public UtilisateurDto CreerUtilisateur(final @RequestBody UtilisateurDto userDto){
         System.out.println(userDto);
         return userService.creeUtilisateur(userDto);
     }
@@ -48,7 +47,7 @@ public class UtilisateurControllers {
      * Delete a user by it's id
      */
     @DeleteMapping("/{id}")
-    public Boolean deleteUser(@PathVariable Long id) {
+    public Boolean SupprimmeUnUtilisateur(@PathVariable Long id) {
         return userService.deleteUser(id);
     }
 }

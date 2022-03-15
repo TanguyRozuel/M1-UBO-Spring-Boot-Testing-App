@@ -2,7 +2,7 @@ package com.services.impl;
 
 import com.dtos.UtilisateurDto;
 import com.entities.Utilisateur;
-import com.repositories.UtilsateurRepo;
+import com.repositories.UtilisateurRepo;
 import com.services.UtilisateurService;
 import org.springframework.stereotype.Service;
 
@@ -10,12 +10,12 @@ import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service("utilisateurService")
+@Service("UtilisateurService")
 public class UtilisateurServiceImpl implements UtilisateurService {
 
-    private final UtilsateurRepo utilisateurRepository;
+    private final UtilisateurRepo utilisateurRepository;
 
-    public UtilisateurServiceImpl(UtilsateurRepo utilisateurRepository){
+    public UtilisateurServiceImpl(UtilisateurRepo utilisateurRepository){
         this.utilisateurRepository = utilisateurRepository;
     }
 
@@ -31,7 +31,7 @@ public class UtilisateurServiceImpl implements UtilisateurService {
 
     @Override
     public UtilisateurDto getUserById(Long userId) {
-        Utilisateur user = utilisateurRepository.findById(userId).orElseThrow(() -> new EntityNotFoundException("Dog not found"));
+        Utilisateur user = utilisateurRepository.findById(userId).orElseThrow(() -> new EntityNotFoundException("Utilisateur not found"));
         return userEntityToDto(user);
     }
 
