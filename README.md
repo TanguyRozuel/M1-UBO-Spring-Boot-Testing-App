@@ -13,3 +13,5 @@ Pour tester la jointure de cours et vacataire il faut au préalable remplir dire
 Nous avons aussi implémenter le SWAGGER pour l'API.
 
 Dans le dossier nous avons mis un fichier Peuplemente.sql contenant les requêtes permettant de remplir les tables de la base de données.
+
+Toujours dans le dossier, nous avons mis les collections postman exhaustive.
