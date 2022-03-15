@@ -8,6 +8,7 @@ import javax.persistence.*;
 public class Cours {
 
     @Id
+    @Column(name = "cours_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String intitule;
