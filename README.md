@@ -11,3 +11,5 @@ Pour lancer l'API, une base de données nommée Test doit être créer afin que 
 Pour tester la jointure de cours et vacataire il faut au préalable remplir directement dans la base de données la table de jointure.
 
 Nous avons aussi implémenter le SWAGGER pour l'API.
+
+Dans le dossier nous avons mis un fichier Peuplemente.sql contenant les requêtes permettant de remplir les tables de la base de données.
