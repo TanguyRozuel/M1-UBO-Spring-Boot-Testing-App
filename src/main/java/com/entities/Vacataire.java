@@ -1,11 +1,21 @@
 package com.entities;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.Data;
 
-public class Vacataire extends Utilisateur{
+import javax.persistence.*;
+
+@Entity
+@Data
+
+/* Classe Vacataire qui récupère les données relatives à un vacataire (issues de Utilisateur) */
+
+public class Vacataire{
     @Id
+    @Column(name = "vacataire_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
+
+    private String nom;
+    private String prenom;
+    private String mail;
 }
